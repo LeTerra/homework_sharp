@@ -13,5 +13,5 @@ double intX2 = Convert.ToDouble(strX2);
 double intY2 = Convert.ToDouble(strY2);
 
 
-double result = Math.Sqrt(Math.Pow(intX1+intX2,2)-Math.Pow(intY1+intY2,2));
+double result = Math.Sqrt(Math.Pow(intX1-intX2,2)+Math.Pow(intY1-intY2,2));
 Console.WriteLine($"The total distance between two points is equal to {result:f2}.");
