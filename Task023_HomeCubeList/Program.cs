@@ -9,7 +9,7 @@ else
 Console.Write("Here is the list of all the squares up until (and incl.) the given number: ");
 for(double i = 1; i < UserInput+1; i++)
 {
-    double iSquare = Math.Pow(i,3);
+    double iSquare = Math.Pow(i,2);
     Console.Write($"{iSquare} ");
 }
 }
