@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Please input your number, to see all the numbers between it and 1:");
-string strUserInput = Console.ReadLine();
+string strUserInput = Console.ReadLine()??string.Empty;
 double UserInput = Convert.ToDouble(strUserInput);
 double ogUserInput = UserInput;
 
