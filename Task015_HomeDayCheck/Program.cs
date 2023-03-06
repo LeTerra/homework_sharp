@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Please write the number, so we could identify if it belongs to a weekday.");
-string strUserInput = Console.ReadLine();
+string strUserInput = Console.ReadLine()??string.Empty;
 int UserInput = Convert.ToInt32(strUserInput);
 
 if(UserInput < 1 || UserInput > 7)
