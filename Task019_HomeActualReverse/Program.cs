@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Please input your 5-digit number.");
-string strUserInput = Console.ReadLine();
+string strUserInput = Console.ReadLine()??string.Empty;
 int UserInput = Convert.ToInt32(strUserInput);
 
 if(UserInput >= 100000 || UserInput < 10000) Console.WriteLine("This is NOT a 5-digit number.");
