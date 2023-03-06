@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Please input the number of your coordinate plane:");
-string strKeyNumber = Console.ReadLine();
+string strKeyNumber = Console.ReadLine()??string.Empty;
 int KeyNumber = Convert.ToInt32(strKeyNumber);
 
 if(KeyNumber < 1 || KeyNumber > 4) Console.WriteLine("Such a plane does not exist.");
