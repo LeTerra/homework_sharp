@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Please input the week-day's number.");
-string userInput = Console.ReadLine();
+string userInput = Console.ReadLine()??string.Empty;
 
 {
 if (userInput == "1") userInput = "Monday";
