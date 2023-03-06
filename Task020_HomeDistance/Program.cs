@@ -1,11 +1,11 @@
 ﻿Console.WriteLine("Please input your first x-coordinate:");
-string strX1 = Console.ReadLine();
+string strX1 = Console.ReadLine()??string.Empty;
 Console.WriteLine("Please input your first y-coordinate:");
-string strY1 = Console.ReadLine();
+string strY1 = Console.ReadLine()??string.Empty;
 Console.WriteLine("Please input your second x-coordinate:");
-string strX2 = Console.ReadLine();
+string strX2 = Console.ReadLine()??string.Empty;
 Console.WriteLine("Please input your second y-coordinate:");
-string strY2 = Console.ReadLine();
+string strY2 = Console.ReadLine()??string.Empty;
 
 double intX1 = Convert.ToDouble(strX1);
 double intY1 = Convert.ToDouble(strY1);
