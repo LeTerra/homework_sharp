@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Please input your number:");
-string strUserInput = Console.ReadLine();
+string strUserInput = Console.ReadLine()??string.Empty;
 double UserInput = Convert.ToDouble (strUserInput);
 if(UserInput == 1) Console.WriteLine("The number is odd.");
 else
