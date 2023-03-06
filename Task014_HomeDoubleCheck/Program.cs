@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Please input your number:");
-string strNumber01 = Console.ReadLine();
+string strNumber01 = Console.ReadLine()??string.Empty;
 double Number01 = Convert.ToDouble(strNumber01);
 
 if(Number01 % 23 == 0 && Number01 % 7 == 0)
