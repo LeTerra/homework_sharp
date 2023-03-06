@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Please input your number, so we may display its' third digit:");
-string strUserInput = Console.ReadLine();
+string strUserInput = Console.ReadLine()??string.Empty;
 int UserInput = Convert.ToInt32(strUserInput);
 
 if(UserInput/100 < 1) 
