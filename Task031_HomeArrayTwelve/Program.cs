@@ -1,25 +1,40 @@
-﻿int arrayNegSum = 0;
-int arrayPosSum = 0;
-int newRngVal = 0;
-
-int[] GetRandomArray(int length, int leftRange, int rightRange)
+﻿int[] GetRandomArray(int length, int leftRange, int rightRange)
 {
 
 int[] array = new int [length];
+Random rand = new Random();
 for(int i = 0; i < array.Length; i++)
    {
-    newRngVal = new Random().Next(leftRange, rightRange + 1);
-    if(newRngVal >= 0) arrayPosSum += newRngVal;
-    else
-    {
-        arrayNegSum += newRngVal;
-    } 
-    array[i] = newRngVal;
+    array[i] = rand.Next(leftRange, rightRange + 1);
    }
    return array;
 }
 
-int[] RndWorkingArray = GetRandomArray(12,-9,9); 
+(int, int) SumPositiveAndNegative(int[] array)
+{
+    int sumNegative = 0;
+    int sumPositive = 0;
+
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i] > 0) 
+        {
+            sumPositive += array[i];
+    }
+    else
+    {
+        sumNegative += array[i];
+    }
+    }
+    return (sumPositive, sumNegative);
+}
+
+const int LENGTH = 12;
+const int LEFT = -9;
+const int RIGHT = 9;
+
+int[] RndWorkingArray = GetRandomArray(LENGTH,LEFT,RIGHT); 
+(int, int) arrayCalculation = SumPositiveAndNegative(RndWorkingArray);
 Console.WriteLine(string.Join(", ", RndWorkingArray));
-Console.WriteLine($"The sum of all the positive numbers in the array is {arrayPosSum}.");
-Console.WriteLine($"The sum of all the negative numbers in the array is {arrayNegSum}.");
+(int sumP, int sumN) = SumPositiveAndNegative(RndWorkingArray);
+Console.WriteLine($"The sum of all the positive elements in the array is {sumP}; the negative elements sum up to {sumN}.");
