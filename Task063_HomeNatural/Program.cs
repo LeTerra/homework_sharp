@@ -14,5 +14,5 @@ double RecurNum(int n)
 }
 
 int inputNumber = ReadInt("Please input your number:");
-Console.Write("N = ");
+Console.Write($"N = {inputNumber}: ");
 Console.Write(RecurNum(inputNumber));
